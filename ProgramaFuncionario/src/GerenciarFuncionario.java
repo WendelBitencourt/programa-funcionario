@@ -3,10 +3,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+
 public class GerenciarFuncionario {
     public List<Funcionario> funcionarios = new ArrayList<>();
     public Scanner sc = new Scanner(System.in);
 
+    
+    
+    
     public static void main(String[] args) {
         GerenciarFuncionario gerenciarFuncionario = new GerenciarFuncionario();
         int opcao;
@@ -51,11 +56,16 @@ public class GerenciarFuncionario {
     }
 
 
+    
     public void execSair() {
-        System.out.println("Saindo do sistema...");
+        System.out.println("Saindo do sistema");
         System.exit(0);
     }
 
+    
+    
+    
+    
     public void execCadastrar() {
 
         System.out.println("Digite o nome: ");
@@ -87,6 +97,9 @@ public class GerenciarFuncionario {
         System.out.println(funcionario);
     }
 
+    
+    
+    
     /**
      * O que era extamente para fazer no método "isEstaAtivo?
      * Tive de pedir ajuda para o pessoal da sala por que eu não entendi muito bem o que era para fazer....
@@ -141,6 +154,9 @@ public class GerenciarFuncionario {
         return null;
     }
 
+    
+    
+    
     public void execBonificarUnico() {
         System.out.println("Digite onúmero de registro: ");
         long registro = Long.parseLong(sc.nextLine());
@@ -166,6 +182,9 @@ public class GerenciarFuncionario {
         System.out.println("Funcionrio inativo, bonificacao invalida.");
     }
 
+    
+    
+    
     public void execBonificar() {
         System.out.println("Digite o valor da bonificação: ");
         double salario = Double.parseDouble(sc.nextLine());
@@ -190,6 +209,7 @@ public class GerenciarFuncionario {
 
             opcao = Integer.parseInt(sc.nextLine());
 
+            
             switch (opcao) {
                 case 1 -> {
                     for (Funcionario funcionario : funcionarios) {
@@ -200,7 +220,10 @@ public class GerenciarFuncionario {
                 case 3 -> System.out.println("Voltando ao menu principal");
                 default -> System.out.println("Opção inválida. Digite novamente a opção desejadaa.");
             }
+        
         } while (opcao != 3);
+    
+    
     }
 }
 
