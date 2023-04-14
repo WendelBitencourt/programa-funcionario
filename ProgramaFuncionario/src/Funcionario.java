@@ -6,6 +6,9 @@ public class Funcionario {
     private String departamento;
     private String rg;
 
+    
+    
+    
     public Funcionario() {
         this.estaAtivo = true;
     }
@@ -70,6 +73,9 @@ public class Funcionario {
         return estaAtivo ? "Ativo" : "Inativo";
     }
 
+    
+    
+    
     @Override
     public String toString() {
         return "Dados do funcionário:\n" +
